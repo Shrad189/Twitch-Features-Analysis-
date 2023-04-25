@@ -1,0 +1,489 @@
+{
+  "version": "0.11.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 44.5,
+          "y": 106
+        },
+        "caption": "numeric_id"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": 308.83681652670265,
+          "y": 373.0694968639835
+        },
+        "caption": "updated_at"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": 308.83681652670265,
+          "y": 106
+        },
+        "caption": "language"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": -148,
+          "y": 373.0694968639835
+        },
+        "caption": "created_at"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": -148,
+          "y": 106
+        },
+        "caption": "dead_account"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": -148,
+          "y": -115.18967893042225
+        },
+        "caption": "affiliate"
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": 44.5,
+          "y": -115.18967893042225
+        },
+        "caption": "mature"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "Language of ID",
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n1",
+        "type": "Id created on",
+        "fromId": "n0",
+        "toId": "n3"
+      },
+      {
+        "id": "n2",
+        "type": "Is Dead",
+        "fromId": "n3",
+        "toId": "n4"
+      },
+      {
+        "id": "n3",
+        "type": "account",
+        "fromId": "n4",
+        "toId": "n5"
+      },
+      {
+        "id": "n4",
+        "type": "Was updated on",
+        "fromId": "n3",
+        "toId": "n1"
+      },
+      {
+        "id": "n5",
+        "type": "ids mature",
+        "fromId": "n7",
+        "toId": "n0"
+      }
+    ]
+  },
+  "dataModel": {
+    "configurations": {
+      "idsToIgnore": []
+    },
+    "fileModel": {
+      "fileSchemas": {
+        "large_twitch_features.csv": {
+          "expanded": true,
+          "fields": [
+            {
+              "name": "views",
+              "type": "integer",
+              "sample": "7879",
+              "include": true
+            },
+            {
+              "name": "mature",
+              "type": "boolean",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "life_time(hr)",
+              "type": "integer",
+              "sample": "969",
+              "include": true
+            },
+            {
+              "name": "created_at",
+              "type": "string",
+              "sample": "2/16/2016",
+              "include": true
+            },
+            {
+              "name": "updated_at",
+              "type": "string",
+              "sample": "10/12/2018",
+              "include": true
+            },
+            {
+              "name": "numeric_id",
+              "type": "integer",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "dead_account",
+              "type": "boolean",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "language",
+              "type": "string",
+              "sample": "EN",
+              "include": true
+            },
+            {
+              "name": "affiliate",
+              "type": "boolean",
+              "sample": "1",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "numeric_id",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "numeric_id",
+              "type": "integer",
+              "identifier": "lg6m4y4HPd0FZ9x1kP8lm"
+            }
+          ],
+          "key": {
+            "properties": [
+              "lg6m4y4HPd0FZ9x1kP8lm"
+            ]
+          }
+        },
+        "n1": {
+          "label": "updated_at",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "updated_at",
+              "type": "string",
+              "identifier": "3k96h9MoetDudzoxQzKTR"
+            }
+          ],
+          "key": {
+            "properties": [
+              "3k96h9MoetDudzoxQzKTR"
+            ]
+          }
+        },
+        "n2": {
+          "label": "language",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "language",
+              "type": "string",
+              "identifier": "hHzddYc-jJPhbmmdBN-_h"
+            }
+          ],
+          "key": {
+            "properties": [
+              "hHzddYc-jJPhbmmdBN-_h"
+            ]
+          }
+        },
+        "n3": {
+          "label": "created_at",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "created_at",
+              "type": "string",
+              "identifier": "UwXJk_7S7g6C4seru-7e2"
+            }
+          ],
+          "key": {
+            "properties": [
+              "UwXJk_7S7g6C4seru-7e2"
+            ]
+          }
+        },
+        "n4": {
+          "label": "dead_account",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "dead_account",
+              "type": "boolean",
+              "identifier": "lcl6fEWwJANLOZ1JRTx_D"
+            }
+          ],
+          "key": {
+            "properties": [
+              "lcl6fEWwJANLOZ1JRTx_D"
+            ]
+          }
+        },
+        "n5": {
+          "label": "affiliate",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "affiliate",
+              "type": "boolean",
+              "identifier": "K2m7qvmjA15YUCwSckDJD"
+            }
+          ],
+          "key": {
+            "properties": [
+              "K2m7qvmjA15YUCwSckDJD"
+            ]
+          }
+        },
+        "n7": {
+          "label": "mature",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "mature",
+              "type": "boolean",
+              "identifier": "nLf3QPb4rIdai2ALA3U9f"
+            }
+          ],
+          "key": {
+            "properties": [
+              "nLf3QPb4rIdai2ALA3U9f"
+            ]
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "Language of ID",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n2",
+          "properties": []
+        },
+        "n1": {
+          "type": "Id created on",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n3",
+          "properties": []
+        },
+        "n2": {
+          "type": "Is Dead",
+          "sourceNodeSchema": "n3",
+          "targetNodeSchema": "n4",
+          "properties": []
+        },
+        "n3": {
+          "type": "account",
+          "sourceNodeSchema": "n4",
+          "targetNodeSchema": "n5",
+          "properties": []
+        },
+        "n4": {
+          "type": "Was updated on",
+          "sourceNodeSchema": "n3",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n5": {
+          "type": "ids mature",
+          "sourceNodeSchema": "n7",
+          "targetNodeSchema": "n0",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "numeric_id"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "updated_at"
+            }
+          ]
+        },
+        "n2": {
+          "nodeSchema": "n2",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "language"
+            }
+          ]
+        },
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "created_at"
+            }
+          ]
+        },
+        "n4": {
+          "nodeSchema": "n4",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "dead_account"
+            }
+          ]
+        },
+        "n5": {
+          "nodeSchema": "n5",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "affiliate"
+            }
+          ]
+        },
+        "n7": {
+          "nodeSchema": "n7",
+          "fileSchema": "large_twitch_features.csv",
+          "mappings": [
+            {
+              "field": "mature"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "numeric_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "language"
+            }
+          ],
+          "fileSchema": "large_twitch_features.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "numeric_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "created_at"
+            }
+          ],
+          "fileSchema": "large_twitch_features.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "created_at"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "dead_account"
+            }
+          ],
+          "fileSchema": "large_twitch_features.csv"
+        },
+        "n3": {
+          "relationshipSchema": "n3",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "dead_account"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "affiliate"
+            }
+          ],
+          "fileSchema": "large_twitch_features.csv"
+        },
+        "n4": {
+          "relationshipSchema": "n4",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "created_at"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "updated_at"
+            }
+          ],
+          "fileSchema": "large_twitch_features.csv"
+        },
+        "n5": {
+          "relationshipSchema": "n5",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "mature"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "numeric_id"
+            }
+          ],
+          "fileSchema": "large_twitch_features.csv"
+        }
+      }
+    }
+  }
+}
